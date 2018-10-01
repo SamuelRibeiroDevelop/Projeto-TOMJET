@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOMJET", "TOMJET\TOMJET.csproj", "{CF76E2D8-70C9-4A42-B627-F9065FAEBEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TOMJET.Modelo", "TOMJET.Modelo\TOMJET.Modelo.csproj", "{8FAED500-E45F-41DA-A042-769759028129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF76E2D8-70C9-4A42-B627-F9065FAEBEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF76E2D8-70C9-4A42-B627-F9065FAEBEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF76E2D8-70C9-4A42-B627-F9065FAEBEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF76E2D8-70C9-4A42-B627-F9065FAEBEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAED500-E45F-41DA-A042-769759028129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAED500-E45F-41DA-A042-769759028129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAED500-E45F-41DA-A042-769759028129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAED500-E45F-41DA-A042-769759028129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D51F786-89B0-4DCA-9632-C0847511131F}
+	EndGlobalSection
+EndGlobal

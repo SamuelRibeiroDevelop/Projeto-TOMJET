@@ -1,0 +1,96 @@
+﻿@model TOMJETClinete.tomjetcliente.Voo
+
+@{
+    ViewBag.Title = "ComprarPassagem";
+}
+
+<h2>Confirmar Passagem</h2>
+
+@using (Html.BeginForm("ConfirmarCompra","Home",Model, FormMethod.Post,null))
+{
+<div>
+    <h4>Voo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AeronaveVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AeronaveVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrigemVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrigemVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DestinoVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DestinoVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdAssentosVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QtdAssentosVoo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VrUnicoPassagemVoo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VrUnicoPassagemVoo)
+        </dd>
+
+    </dl>
+</div>
+
+@Html.Label("", htmlAttributes: new { @class = "control-label col-md-2" })
+    <p>
+        <input type="text" id="qtdPassagens" name="qtdPassagens" placeholder="Quantidade de passagens" />
+    </p>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Confirmar Compra" class="btn btn-success" />
+        </div>
+    </div>
+}
+
+<p>
+    @Html.ActionLink("Voltar", "Index")
+</p>

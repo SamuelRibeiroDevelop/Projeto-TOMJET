@@ -1,0 +1,58 @@
+﻿@model IEnumerable<TOMJETClinete.tomjetcliente.Passagem>
+
+@{
+    ViewBag.Title = "TodosBilhetes";
+}
+
+<h2>Todos Bilhetes</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Voo.NumVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataPassagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraPassagem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorPassagem)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Voo.NumVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataPassagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraPassagem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorPassagem)
+        </td>
+
+        @using (Html.BeginForm("DevolverBilhete", "Home", item))
+        {
+        <td>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Devolver Bilhete" class="btn btn-danger" />
+                </div>
+            </div>
+        </td>
+        }
+    </tr>
+}
+
+</table>
+
+<p>
+    @Html.ActionLink("Voltar", "Index")
+</p>

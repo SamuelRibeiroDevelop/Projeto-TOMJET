@@ -1,0 +1,97 @@
+﻿@model IEnumerable<TOMJETClinete.tomjetcliente.Voo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @using (Html.BeginForm("CadastrarVoo", "Home"))
+    {
+        <div>
+            <input type="submit" value="Cadastrar Novo Voo" class="btn btn-info" />
+        </div>
+    }
+</p>
+
+<p>
+    @using (Html.BeginForm("BuscarVoo", "Home"))
+    {
+        <div>
+            <input type="submit" value="Buscar Voo" class="btn btn-info" />
+        </div>
+    }
+</p>
+
+<p>
+    @using (Html.BeginForm("TodosBilhetes", "Home"))
+    {
+        <div>
+            <input type="submit" value="Todos Bilhetes" class="btn btn-info" />
+        </div>
+    }
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AeronaveVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoraVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OrigemVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DestinoVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.QtdAssentosVoo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VrUnicoPassagemVoo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AeronaveVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoraVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OrigemVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DestinoVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.QtdAssentosVoo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VrUnicoPassagemVoo)
+        </td>
+        <td>
+            @Html.ActionLink("Comprar Passagem", "ComprarPassagem", new { id=item.IdVoo}) 
+        </td>
+    </tr>
+}
+
+</table>
